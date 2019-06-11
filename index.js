@@ -1,4 +1,15 @@
- let inpData = document.getElementById('input')
+ /**
+  * Dfkblfwbz bvtqkf
+  * 
+  * @param {string} inpData - содержимое инпута Email
+  * @param {DomNode} btn - Кнопка по которой отправляем fetch c содержимым инпута
+  * @param {string} access_key - ключ к API
+  * @param {DomNode} small - содержимое тега small для ответа валидации
+  */
+
+
+
+        let inpData = document.getElementById('input')
         let btn = document.getElementById('btn')
         let small = document.getElementById('small')
         btn.addEventListener('click',()=>{
@@ -13,7 +24,7 @@
                 let access_key = '333d64ccc8ad0d0051adf39d6ed460fc';
                 let email_address = inpData.value;
 
-                fetch('http://apilayer.net/api/check?access_key=' + access_key + '&email=' + email_address, {method: 'POST'}
+                fetch('https://apilayer.net/api/check?access_key=' + access_key + '&email=' + email_address, {method: 'POST', dataType: 'jsonp',}
                     ).then(function(response) {
                 let contentType = response.headers.get("content-type");
                 if(contentType && contentType.includes("application/json")) {
@@ -53,3 +64,6 @@
             }
              
 })
+
+
+
