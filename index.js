@@ -41,7 +41,7 @@
                    document.getElementById('small').innerHTML = 'Email valid'
                    document.getElementById('small').style.color = "green";
                 }
-                console.log(json.format_valid);
+                console.log(json.format_valid);//Response valid
                 console.log(json.smtp_check);
                 console.log(json.score);
                 console.log(json);
